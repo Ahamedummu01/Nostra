@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nostra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Sign Up Message Section -->
+  <section class="signup__msg">
+    <h3>Sign Up and GET 20% OFF for your first Order </h3>
+    <h3 class="close">X</h3>
+  </section>
+
+  <!-- Navbar Section -->
+  <nav class="navbar__section">
+    <h1>Nostra</h1>
+    <div class="navbar__section-1">
+      <p>
+        <a href="#Home">Home</a>
+      </p>
+      <p>
+        <a href="#Arrivals"> Arrivals</a>
+      </p>
+      <p>
+        <a href="#Want">Wanted</a>
+      </p>
+      <p>
+        <a href="collection.html">Collection</a>
+      </p>
+      <p>
+        <a href="contact.html">Contact Us</a>
+      </p>
+    </div>
+    <div class="menu-icon" onclick="showNavbar()">☰</div>
+  </nav>
+
+  <!-- 👇 THIS IS BELOW NAVBAR -->
+  <div class="side-navbar" id="sideNavbar">
+
+    <p class="close-nav" onclick="closeNavbar()">✖</p>
+
+    <a href="index.html">Home</a>
+    <a href="index.html">Arrivals</a>
+    <a href="#">Wanted</a>
+    <a href="collection.html">Collection</a>
+    <a href="contact.html">Contact</a>
+
+  </div>
+
+  <!-- Banner Section -->
+  <div class="slider" id="Home">
+
+    <img class="slide" src="./image/image1.jpg">
+    <img class="slide" src="./image/image2.jpg">
+    <img class="slide" src="./image/image3.jpg">
+
+    <button onclick="prev()">❮</button>
+    <button onclick="next()">❯</button>
+
+  </div>
+
+  <!-- Banner Part-1 -->
+  <div class="banner">
+    <h1>Level Up Your Style With Our</h1>
+    <h3>Summer Collections</h3>
+    <button>Shop Now &rarr;</button>
+  </div>
+
+  <!-- Customer Experience Section -->
+
+  <section class="customer">
+
+    <h1>We Provide Best<br>
+      Customer Experiences</h1>
+    <p>|| We ensure that our customer have the best shopping experience</p>
+
+
+
+  </section>
+
+  <!-- Customer Box -->
+  <section class="customer__box">
+    <div class="box">
+      <img src="./image/tick.jpg" style="height: 60px; width: 60px;" class="customer__box-image">
+      <h3>Original Products</h3>
+      <p>Made with high-quality original fabricfor long-lasting comfort and style.
+      </p>
+    </div>
+
+    <div class="box">
+      <img src="./image/smile.jpg" style="height: 60px; width: 60px;" class="customer__box-image">
+      <h3>Original Products</h3>
+      <p>Made with high-quality original fabricfor long-lasting comfort and style.
+      </p>
+    </div>
+
+    <div class="box">
+      <img src="./image/mop.jpg" style="height: 60px; width: 60px;" class="customer__box-image">
+      <h3>Original Products</h3>
+      <p>Made with high-quality original fabricfor long-lasting comfort and style.
+      </p>
+    </div>
+
+    <div class="box">
+      <img src="./image/delivery.jpg" style="height: 60px; width: 60px;" class="customer__box-image">
+      <h3>Original Products</h3>
+      <p>Made with high-quality original fabricfor long-lasting comfort and style.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- New Arrivals Section -->
+
+  <section class="newarrivals" id="Arrivals">
+    <h1>New Arrivals</h1>
+    <div class="newarrivals__section">
+
+      <div class="arrival_container">
+        <img src="./image/shirt3.jpg" class="newarrival_image">
+
+        <div class="arrival_btn">
+          <button>Shop Now &rarr;</button>
+        </div>
+      </div>
+
+      <div class="arrival_container">
+        <img src="./image/shirt4.jpg" class="newarrival_image">
+
+        <div class="arrival_btn">
+          <button>Shop Now &rarr;</button>
+        </div>
+      </div>
+
+      <div class="arrival_container">
+        <img src="./image/shirt9.jpg" class="newarrival_image">
+
+        <div class="arrival_btn">
+          <button>Shop Now &rarr;</button>
+        </div>
+      </div>
+
+      <div class="arrival_container">
+        <img src="./image/shirt7.jpg" class="newarrival_image">
+
+        <div class="arrival_btn">
+          <button>Shop Now &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Most Wanted Section -->
+
+  <!-- Most Wanted Section -->
+  <section class="mostwanted" id="Want">
+    <h1>Most Wanted</h1>
+    <div class="most_container">
+
+      <div class="product_card">
+        <img src="./image/shirt7.jpg" class="most_image">
+
+        <div class="sale_btn">
+          <button>Sale</button>
+        </div>
+
+        <div class="heart">
+          <img src="./image/heart.jpg" class="heart_image">
+        </div>
+      </div>
+
+      <div class="product_card">
+        <img src="./image/shirt1.jpg" class="most_image">
+
+        <div class="sale_btn">
+          <button>Sale</button>
+        </div>
+
+        <div class="heart">
+          <img src="./image/heart.jpg" class="heart_image">
+        </div>
+      </div>
+
+      <div class="product_card">
+        <img src="./image/shirt4.jpg" class="most_image">
+
+        <div class="sale_btn">
+          <button>Sale</button>
+        </div>
+
+        <div class="heart">
+          <img src="./image/heart.jpg" class="heart_image">
+        </div>
+      </div>
+
+      <div class="product_card">
+        <img src="./image/shirt5.jpg" class="most_image">
+
+        <div class="sale_btn">
+          <button>Sale</button>
+        </div>
+
+        <div class="heart">
+          <img src="./image/heart.jpg" class="heart_image">
+        </div>
+      </div>
+
+
+      <div class="product_card">
+        <img src="./image/shirt7.jpg" class="most_image">
+
+        <div class="sale_btn">
+          <button>Sale</button>
+        </div>
+
+        <div class="heart">
+          <img src="./image/heart.jpg" class="heart_image">
+        </div>
+      </div>
+
+      <div class="product_card">
+        <img src="./image/shirt9.jpg" class="most_image">
+
+        <div class="sale_btn">
+          <button>Sale</button>
+        </div>
+
+        <div class="heart">
+          <img src="./image/heart.jpg" class="heart_image">
+        </div>
+      </div>
+
+
+      <div class="product_card">
+        <img src="./image/shirt7.jpg" class="most_image">
+
+        <div class="sale_btn">
+          <button>Sale</button>
+        </div>
+
+        <div class="heart">
+          <img src="./image/heart.jpg" class="heart_image">
+        </div>
+      </div>
+
+
+
+      <div class="product_card">
+        <img src="./image/shirt2.jpg" class="most_image">
+
+        <div class="sale_btn">
+          <button>Sale</button>
+        </div>
+
+        <div class="heart">
+          <img src="./image/heart.jpg" class="heart_image">
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Offer Section -->
+
+  <section class="offer-section">
+    <div class="offer-section-image">
+      <img src="./image/offer-fashion-image.jpg">
+
+    </div>
+    <div class="offer-section-btn">
+      <h1>Limited Offer !</h1>
+      <h3>35% OFF on this for the first 30 Customers.</h3>
+
+      <button>Shop Now &rarr;</button>
+    </div>
+
+  </section>
+  <!-- News Letter Section -->
+  <section class="newsletter">
+    <div class="newsletter-part">
+      <h1>Join our News Letter</h1>
+      <h3>Signup for our email newspaper to get exclusive discounts, updates, and more...</h3>
+      <input type="text"><br>
+      <button>Subscribe &rarr;</button>
+    </div>
+  </section>
+
+
+  <!-- Footer Section -->
+
+
+  <section class="footer">
+    <section class="foot">
+      <h1>Nostra</h1>
+      <h2>The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those Interest.</h2>
+      <img src="./image/insta.png">
+      <img src="./image/fb.jpg">
+      <img src="./image/twitter.jpg">
+      <h2>@ 2023 Nostra.com</h2>
+    </section>
+  </section>
+
+
+
+
+
+
+
+  <!-- Javascript -->
+
+
+
+  <script>
+
+
+
+
+    // Sign Up Close button
+    let closeBtn = document.querySelector(".close")
+    let signupMsg = document.querySelector(".signup__msg")
+
+    closeBtn.addEventListener("click", function () {
+      signupMsg.style.display = "none"
+    })
+
+    //News letter Section
+    let subscribeBtn = document.querySelector(".newsletter button")
+
+    subscribeBtn.addEventListener("click", function () {
+      alert("Thank you for subscribing to our newsletter!")
+    })
+
+    //Heat Color change
+
+    let hearts = document.querySelectorAll(".heart_image")
+
+    hearts.forEach(function (heart) {
+      heart.addEventListener("click", function () {
+        heart.style.filter = "invert(27%) sepia(93%) saturate(7476%) hue-rotate(353deg)"
+      })
+    })
+
+
+    //Show slide
+    let index = 0;
+    let slides = document.querySelectorAll(".slide");
+
+    function showSlide() {
+      slides.forEach(slide => slide.style.display = "none");
+      slides[index].style.display = "block";
+    }
+
+    function next() {
+      index++;
+      if (index >= slides.length) {
+        index = 0;
+      }
+      showSlide();
+    }
+
+    function prev() {
+      index--;
+      if (index < 0) {
+        index = slides.length - 1;
+      }
+      showSlide();
+    }
+
+    showSlide();
+
+    function showNavbar() {
+      document.getElementById("sideNavbar").style.left = "0"
+    }
+
+    function closeNavbar() {
+      document.getElementById("sideNavbar").style.left = "-100%"
+    }
+
+
+
+  </script>
+
+
+
+
+</body>
+
+</html>

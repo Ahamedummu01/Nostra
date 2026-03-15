@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins, sans-serif;
+        }
+
+        /* MAIN LAYOUT */
+
+        .collection-container {
+            display: flex;
+        }
+
+        /* LEFT FILTER */
+
+        .filter {
+            width: 250px;
+            padding: 20px;
+            border-right: 2px solid #111827;
+        }
+
+        .filter h2 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .filter label {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        /* RIGHT SECTION */
+
+        .products {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* SEARCH BAR */
+
+        .searchbar input {
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid #111827;
+            padding-left: 15px;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        /* PRODUCT GRID */
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .product {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .product p {
+            margin-top: 5px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar__section">
+        <h1>Nostra</h1>
+        <div class="navbar__section-1">
+            <p>
+                <a href="index.html">Home</a>
+            </p>
+            <p>
+                <a href="index.html">Arrivals</a>
+            </p>
+            <p>
+                <a href="index.html">Wanted</a>
+            </p>
+            <p>
+                <a href="collection.html">Collection</a>
+            </p>
+
+
+            <p>
+                <a href="contact.html">Contact Us</a>
+            </p>
+        </div>
+    </nav>
+
+    <div class="collection-container">
+
+        <!-- FILTER SECTION -->
+
+        <div class="filter">
+
+            <h2>Occasion</h2>
+            <label><input type="checkbox" value="summer"> Summer</label>
+            <label><input type="checkbox" value="party"> Party</label>
+            <label><input type="checkbox" value="beach"> Beach</label>
+
+            <h2>Colors</h2>
+            <label><input type="checkbox" value="red"> Red</label>
+            <label><input type="checkbox" value="blue"> Blue</label>
+            <label><input type="checkbox" value="white"> White</label>
+            <label><input type="checkbox" value="green"> Green</label>
+
+            <h2>Arrivals</h2>
+            <label><input type="checkbox" value="new"> New</label>
+            <label><input type="checkbox" value="old"> Old</label>
+
+        </div>
+
+
+        <!-- PRODUCT SECTION -->
+
+        <div class="products">
+
+            <div class="searchbar">
+                <input type="text" id="search" placeholder="Search">
+            </div>
+
+            <div class="product-grid">
+
+                <div class="product summer blue new">
+                    <img src="image/shirt1.jpg">
+                    <h3>Floral Summer Shirt</h3>
+                    <p>₹599</p>
+                </div>
+
+                <div class="product summer green new">
+                    <img src="image/shirt2.jpg">
+                    <h3>Summer Green</h3>
+                    <p>₹599</p>
+                </div>
+
+                <div class="product party black new">
+                    <img src="image/shirt3.jpg">
+                    <h3>Party Wear</h3>
+                    <p>₹599</p>
+                </div>
+
+                <div class="product beach white old">
+                    <img src="image/shirt4.jpg">
+                    <h3>Beach Shirt</h3>
+                    <p>₹599</p>
+                </div>
+
+                <div class="product summer blue old">
+                    <img src="image/shirt5.jpg">
+                    <h3>Casual Blue</h3>
+                    <p>₹599</p>
+                </div>
+
+                <div class="product party red new">
+                    <img src="image/shirt1.jpg">
+                    <h3>Essential Tee</h3>
+                    <p>₹599</p>
+                </div>
+
+                <div class="product beach green old">
+                    <img src="image/shirt7.jpg">
+                    <h3>Premium Shirt</h3>
+                    <p>₹599</p>
+                </div>
+
+                <div class="product party black new">
+                    <img src="image/shirt1.jpg">
+                    <h3>Modern Fit New</h3>
+                    <p>₹599</p>
+                </div>
+
+                <div class="product summer white new">
+                    <img src="image/shirt9.jpg">
+                    <h3>Classic White</h3>
+                    <p>₹599</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /* SEARCH FUNCTION */
+
+        let searchInput = document.getElementById("search")
+        let products = document.querySelectorAll(".product")
+
+        searchInput.addEventListener("keyup", function () {
+
+            let value = searchInput.value.toLowerCase()
+
+            products.forEach(function (product) {
+
+                let name = product.querySelector("h3").textContent.toLowerCase()
+
+                if (name.includes(value)) {
+                    product.style.display = "block"
+                }
+                else {
+                    product.style.display = "none"
+                }
+
+            })
+
+        })
+
+
+        /* CHECKBOX FILTER */
+
+        let checkboxes = document.querySelectorAll(".filter input")
+
+        checkboxes.forEach(function (box) {
+
+            box.addEventListener("change", filterProducts)
+
+        })
+
+        function filterProducts() {
+
+            let selected = []
+
+            checkboxes.forEach(function (box) {
+
+                if (box.checked) {
+                    selected.push(box.value)
+                }
+
+            })
+
+            products.forEach(function (product) {
+
+                if (selected.length === 0) {
+                    product.style.display = "block"
+                }
+
+                else {
+
+                    let match = selected.some(function (cat) {
+
+                        return product.classList.contains(cat)
+
+                    })
+
+                    if (match) {
+                        product.style.display = "block"
+                    }
+
+                    else {
+                        product.style.display = "none"
+                    }
+
+                }
+
+            })
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- News Letter Section -->
+<section class="newsletter1">
+    <div class="newsletter-part">
+        <h1>Join our News Letter</h1>
+        <h3>Signup for our email newspaper to get exclusive discounts, updates, and more...</h3>
+        <input type="text"><br>
+        <button>Subscribe &rarr;</button>
+    </div>
+</section>
+
+
+<!-- Footer Section -->
+
+
+<section class="footer">
+    <section class="foot">
+        <h1>Nostra</h1>
+        <h2>The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those Interest.</h2>
+        <img src="./image/insta.png">
+        <img src="./image/fb.jpg">
+        <img src="./image/twitter.jpg">
+        <h2>@ 2023 Nostra.com</h2>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+</section>
+<script>
+    //Checkbox enable
+
+    let checkboxes = document.querySelectorAll(".occasion input")
+    let products = document.querySelectorAll(".card-section")
+
+    checkboxes.forEach(function (box) {
+        box.addEventListener("change", filterProducts)
+    })
+
+    function filterProducts() {
+
+        let selected = []
+
+        checkboxes.forEach(function (box) {
+            if (box.checked) {
+                selected.push(box.value)
+            }
+        })
+
+        products.forEach(function (product) {
+
+            if (selected.length === 0) {
+                product.style.display = "block"
+            }
+            else {
+                let match = selected.some(function (cat) {
+                    return product.classList.contains(cat)
+                })
+
+                if (match) {
+                    product.style.display = "block"
+                } else {
+                    product.style.display = "none"
+                }
+            }
+
+        })
+    }
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
